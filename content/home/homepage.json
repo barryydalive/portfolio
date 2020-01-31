@@ -1,19 +1,39 @@
 {
   "title": "Home",
   "content": "intro.md",
-  "gallery": [{
-    "title": "React Context",
-    "copy": "For global styles.",
-    "image": "../images/gallery/react-context.jpg"
-  },
-  {
-    "title": "Page Transitions",
-    "copy": "Component-based for easy usage.",
-    "image": "../images/gallery/page-transitions.jpg"
-  },
-  {
-    "title": "Intersection Observer",
-    "copy": "Including a polyfill for Safari.",
-    "image": "../images/gallery/intersection-observer.jpg"
-  }]
+  "gallery": [
+    {
+      "title": "DashPad",
+      "copy": "React Native App created to make old tablets useful. Displays commute time, weather, time, and upcoming calendar events",
+      "image": "../images/gallery/dashpad_shelf.jpg"
+    },
+    {
+      "title": "Enki",
+      "copy": "Expo App created to allow non-programmers to make their own mobile apps. Inspired by SquareSpace",
+      "image": "../images/gallery/enki.png"
+    },
+    {
+      "title": "Barry's Beer Fridge",
+      "copy": "Website built to track the inventory of my apartment beer fridge.",
+      "image": "../images/gallery/barrys-beer-fridge.png"
+    },
+    {
+      "title": "Did Yandhi Drop Yet?",
+      "copy": "Website checks the Itunes API to see if the Kanye West album YANDHI has released",
+      "image": "../images/gallery/did-yandhi-drop.png"
+    },
+    {
+      "title": "GameHub",
+      "copy": "Team Project to develop an e-commerce website. My team built a website for selling video games online.",
+      "image": "../images/gallery/game_hub.png"
+    },
+    {
+      "title": "FeelsGoodMan",
+      "copy": "Hackathon project as a student at FullStack Academy. Expo/React Native app built with the intention of simplifying weather data and letting users know if it 'Feels Good Man' or 'Feels Bad Man' outside.",
+      "image": "../images/gallery/feelsGoodMan.png"
+    }
+  ],
+  "profile" : {
+    "image": "../images/profile/BarryLazer.jpg"
+  }
 }

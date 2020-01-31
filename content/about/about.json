@@ -1,4 +1,9 @@
 {
   "title": "About",
-  "content": "content.md"
+  "content": "content.md",
+  "gallery": [{
+    "title": "Page Transitions",
+    "copy": "Component-based for easy usage.",
+    "image": "../images/gallery/page-transitions.jpg"
+  }]
 }

@@ -7,28 +7,38 @@ import Gallery from 'components/gallery';
 import IOExample from 'components/io-example';
 import Modal from 'containers/modal';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image'
+import { ImageContainer, FlexBox } from '../components/box/box.css';
+const Index = ({ data }) => {
+  console.log('data.homeJson:', data.homeJson);
+  const profile = data.homeJson.profile
+  const { image } = profile
+  return (
+    <Layout>
+      <FlexBox >
 
-const Index = ({ data }) => (
-  <Layout>
-    <Box>
-      <Title as="h2" size="large">
-        {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
-      </Title>
-      <Modal>
-        <video
-          src="https://i.imgur.com/gzFqNSW.mp4"
-          playsInline
-          loop
-          autoPlay
-          muted
-        />
-      </Modal>
-    </Box>
-    <Gallery items={data.homeJson.gallery} />
-    <div style={{ height: '50vh' }} />
-    <IOExample />
-  </Layout>
-);
+        <ImageContainer>
+
+          <Img fluid={
+            image ? {
+              ...image.childImageSharp.fluid
+            } : {}
+          }
+            alt='profile picture'
+          />
+        </ImageContainer>
+        <Box>
+          <Title as="h2" size="large">
+            {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
+          </Title>
+        </Box>
+      </FlexBox>
+      <Gallery items={data.homeJson.gallery} />
+      {/* <div style={{ height: '50vh' }} /> */}
+      {/* <IOExample /> */}
+    </Layout>
+  );
+}
 
 Index.propTypes = {
   data: PropTypes.object.isRequired,
@@ -51,7 +61,16 @@ export const query = graphql`
         copy
         image {
           childImageSharp {
-            fluid(maxHeight: 500, quality: 90) {
+            fluid(maxHeight: 500, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+      profile {
+        image {
+          childImageSharp{
+            fluid(maxHeight:500, quality:100){
               ...GatsbyImageSharpFluid_withWebp
             }
           }

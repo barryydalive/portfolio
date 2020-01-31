@@ -1,11 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
-import { Title, Copy } from './item.css';
+import { Title, Copy, ImageContainer } from './item.css';
 
 const Item = ({ title, copy, image }) => (
   <figure>
-    <Img fluid={image ? image.childImageSharp.fluid : {}} alt={title} />
+    <ImageContainer>
+      <Img
+        fluid={
+          image
+            ? {
+                ...image.childImageSharp.fluid,
+                aspectRatio: 1.5,
+              }
+            : {}
+        }
+        alt={title}
+      />
+    </ImageContainer>
     <figcaption>
       <Title>{title}</Title>
       <Copy>{copy}</Copy>

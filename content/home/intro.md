@@ -1,1 +1,1 @@
-An opinionated starter for using Gatsby v2 with React Context, tag-agnostic styled-components, page transitions and scroll events with IntersectionObserver.
+Hi I'm Barry! I'm a NYC native who's lived in Queens my whole life. When I'm not building an app, I'm probably trying a new beer, playing Dota, or watching Star Wars! Check out some of the things I've built below!
